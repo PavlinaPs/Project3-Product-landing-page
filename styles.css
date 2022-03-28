@@ -1,25 +1,33 @@
-html {
-    height: 100%;
-    margin: 0;
+:root {
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 1440px;
+    margin: 0 auto;
     height: 100%;
-    margin: 0px auto;
     font-family: 'Sue Ellen Francisco', cursive;
     background-color: #faf5d7;
+    border-left: 1px solid #FFC2E2;
+    border-right: 1px solid #FFC2E2;
 }
 
 #nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    max-width: 1440px;
     position: fixed;
     z-index: 999;
     width: 100%;
@@ -219,7 +227,7 @@ h1 {
 
 .text > ul > li {
     margin: 0;
-	padding: 15px 0px 15px 60px;
+	padding: 15px 0 15px 60px;
 	list-style: none;
     
 	background-image: url("./Images/Red-yarn-PngItem_37893.png");
@@ -330,23 +338,37 @@ color: rgb(191, 50, 106);
         margin-left: auto;
         margin-right: auto;
         padding-left: 0px;
-        width: 150px;
-    }
-
-    .section-content > img {
         width: 120px;
         margin-bottom: 15px;
     }
 
-    .form-group {
-        margin-left: 0;
-    }
-
+    .form-group, 
     #submit {
         margin-left: 0;
     }
 
     .mobile-center {
         text-align: center;
+    }
+
+    /*socks remove list picture*/
+    .text > ul > li {
+        padding: 15px 0 15px 0;
+        background-image: none;
+    }
+}
+
+@media (min-width: 1440px) {
+    .section-content > img {
+        width: 200px;
+    }
+
+    .section-content {
+        grid-template-columns: 280px 1fr;
+    }
+    
+    #submit,
+    .form-group {
+        margin-left: 280px;
     }
 }
