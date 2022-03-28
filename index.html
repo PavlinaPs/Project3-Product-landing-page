@@ -2,17 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/styles.css">
-    <script src="static/script.js" defer></script>
-    <title>PKClub</title>
+    <meta name="description" content="freeCodeCamp Challenge #3 - Product Landing Page">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="Images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Pavlina's Knitting Club</title>
+
+    <script defer src="./script.js"></script>
 </head>
 <body>
     <header id="header">
         <nav id="nav-bar">
             <div id="img-brand-container">
-                <img id="header-img" src="/Project3-ProductLandingPage/static/Images/Knitting-logo.png" alt="Knitting-logo">
+                <div>
+                    <img id="header-img" src="./Images/favicon.png" alt="Knitting-logo">
+                </div>
                 <div id="brand-name">Pavlina's Knitting Club</div>
             </div>
             <a href="#" class="hamburger-button">
@@ -22,23 +33,21 @@
             </a>
             <div class="nav-links-container">
                 <ul>
-                    <li><a class="nav-link" href="#1">About</a></li>
-                    <li><a class="nav-link" href="#2">Socks</a></li>
-                    <li><a class="nav-link" href="#3">Hats</a></li>
-                    <li><a class="nav-link" href="#4">Gloves</a></li>
-                    <li><a class="nav-link" href="#5">Tutorials</a></li>
+                    <li class="nav-item" active="true"><a class="nav-link" href="#1">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#2">Socks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#3">Hats</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#4">Gloves</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#5">Tutorials</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <br><br>
-    <h1>Knitting is fun.<br> Also a therapy.<br> And you can wear it.<br> Welcome to Pavlina's Knitting Club.</h1><br>
     <main>
+        <h1>Knitting is fun.<br> Also a therapy.<br> And you can wear it.<br> Welcome to Pavlina's Knitting Club.</h1>
         <section class="section-containers">
             <div class="titles" id="1">About</div>
             <div class="section-content">
-                <!-- <img src="https://www.clipartmax.com/png/small/1-10893_a-group-for-those-who-like-to-knit-and-crochet-to-communication.png" alt="A Group For Those Who Like To Knit And Crochet To Communication - Ltd. Edition - Disappear Into Yarns - Unisex Sweatshirt @clipartmax.com"> -->
-                <img src="static/Images/clipart10893.png">
+                <img src="./Images/clipart10893.png" alt="A basket of colorful yarn">
                 <div class="text">
                     <p>I am happy that you are visiting my page and that you are interested in knitting.</p>
                     <p>Whatever reason brought you to it, knitting has many benefits. Many studies were conducted and many blogs written on this topic, these benefits I find the most interesting and appealing:</p>
@@ -54,22 +63,20 @@
                 </div>
             </div>
             <div id="signup">
-                <p><strong>Sign up for monthly tips and inspiration</strong></p>
                 <form id="form" action="https://www.freecodecamp.com/email-submit">
                     <div class="form-group">
-                        <!-- <label id="email-label" for="email">Email </label> -->
-                        <input type="email" id="email" name="email" placeholder="Enter your email address" required><br>
+                        <label id="email-label" for="email">Sign up for monthly tips and inspiration
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required><br>
+                        </label>
                     </div>
-                    <div class="submit-button">
-                        <input type="submit" id="submit" value="Submit">
-                    </div>
+                    <button id="submit" button-type="submit">Submit</button>
                 </form>
-            </div><br>
-        </section><br>
-        <section class="section-containers">
-            <div class="titles" id="2">Socks</div>
+            </div>
+        </section>
+        <section class="section-containers" id="2">
+            <div class="titles" >Socks</div>
             <div class="section-content">
-                <img src="static/Images/Socks.png">
+                <img src="./Images/Socks.png" alt="Socks">
                 <div class="text">
                     <p>Socks are not the easiest items to knit, but once you have finished your first pair, you never stop knitting another.</p>
                     <p>You can choose from two kinds of needles - double pointed or circular. I prefer double pointed, even though I have to watch the end stitches so they not fall off the needles, it is easier to distribute stitches evenly and keep track of their count.</p>
@@ -81,62 +88,77 @@
                             </iframe>
                         </li>
                         <li>There are also many <strong>free instructions on the internet</strong>. For example <a href="https://knotions.com/sugar-glazed-socks/" target="_blank">"Sugar Glazed Socks"</a> by Knotions. Here is my finished pair.<br><br>
-                            <img src="static/Images/Socks-pink-300px.jpg" width="300" ></li>
+                            <img src="./Images/Socks-pink-300px.jpg" width="300" alt="Photo of pink socks"></li>
                         <li>Or if you prefer to have instructions offline,  <strong>buy a book</strong> for example here: <a href="https://www.amazon.com/s?k=knitting+socks&i=stripbooks-intl-ship&ref=nb_sb_noss_2" target="_blank">Books about knitting socks</a> on Amazon. This book I like the most, everything is there (in German): <a href="https://www.amazon.de/geniale-Sockenworkshop-Standardwerk-Sockenstricken-Online-Videos/dp/3772481515/ref=sr_1_5?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=der+geniale+socken+workshop&qid=1636919718&qsid=259-9471146-6134013&sr=8-5&sres=3772481531%2C3772465676%2CB0018ZKZ1U%2C3772481825%2C3772481515%2C3772481604%2C384106518X%2C3772463266%2C3772464319%2CB08FNMPFV3%2C3772481299%2C3841065090%2C3772464017%2C384106602X%2C0307449440%2CB08JSQSTHN&srpt=ABIS_BOOK" target="_blank">Der geniale Sockenworkshop</a>.</li>
                     </ul>
                 </div>
             </div>
-        </section><br>
+        </section>
+
         <section class="section-containers">
-            <div class="titles" id="3">Hats</div>
+            <div class="titles hats" id="3">Hats</div>
             <div class="section-content">
-                <img src="static/Images/beanie-clip-art_5468157.png">
+                <img src="./Images/beanie-clip-art_5468157.png" alt="A beanie hat">
                 <div class="text">
                     <p>Hats are the best projects for beginners on circular or double pointed needles. You can easily learn and practice decreases. Simple hats don't need any other tricks. Maybe a pompom in the end.</p>
                     <p>I learned knitting hats from video tutorial below. It combines the use of circular needles and double pointed needles in one project. As the stitch count gets smaller, double pointed needles make the knitting easier.</p>
                     <p>Video Tutorial "Learn to Knit a Benefaction Knit Hat" by Knit Picks:</p>
-                    <iframe id="video1" width="300" height="200"
-                    src="https://www.youtube.com/embed/uaoC__dKucA" title="Video Tutorial Hats" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
+                    <div class="mobile-center">
+                        <iframe id="video1" width="300" height="200"
+                        src="https://www.youtube.com/embed/uaoC__dKucA" title="Video Tutorial Hats" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
                     <p>And my daughter as a happy customer wearing the result, with a double bow added</p>
-                    <img src="static/Images/White-knit-hat-300x200.jpg">
+                    <div class="mobile-center">
+                        <img src="./Images/White-knit-hat-300x200.jpg" alt="Happy customer with white hat on">
+                    </div>
                 </div>
             </div>
-        </section><br><br>
+        </section>
+
         <section class="section-containers">
-            <div class="titles" id="4">Gloves</div>
+            <div class="titles gloves" id="4">Gloves</div>
             <div class="section-content">
-                <img src="static/Images/Mittens-Gloves-PNG-Free-Download.png">
+                <img src="./Images/Mittens-Gloves-PNG-Free-Download.png" alt="mittens">
                 <div class="text">
                     <p>You can choose a level of difficulty when knitting gloves, because there are projects for every level.</p>
                     <p>For <strong>beginners</strong> would be suitable for example fingerless gloves, where you only need to knit the thumb (or not, it can even be only a hole for the thumb). It might seem useless, such gloves, but oh yes, they are useful. You can use your cell phone. I made one pair for myself, reading facebook while in car waiting for the train to pass.</p>
                     <p>For <strong>advanced</strong> knitters I would suggest mittens, with some kind of pattern either in stitches or color. I sure you can find myriads of free patterns online.</p>
                     <p>And even for <strong>experts</strong>, five finger glove with a pattern could be a challenge. Or you can leave the fingers unclosed and knit a flip cover for them.</p>
-                    <iframe id="video3" width="300" height="200"
-                    src="https://www.youtube.com/embed/ANx0zQ0nrYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
+                    <div class="mobile-center">
+                        <iframe id="video3" width="300" height="200"
+                        src="https://www.youtube.com/embed/ANx0zQ0nrYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
                     <p>I bought a book about gloves, I think it is great. Here is the link: <a href="https://www.amazon.de/Mitts-Ultimate-Knitting-Mittens-Gloves/dp/1632504928/ref=sr_1_12?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=knit+mit&qid=1637525302&qsid=259-9471146-6134013&s=books&sr=1-12&sres=3830720955%2C3745905369%2CB093RHDBYV%2C3960932561%2C377248140X%2C1446308685%2C1570769397%2C3830721110%2C1632506475%2C1645671828%2C1570769109%2C1632504928%2C3920269772%2C3830720823%2CB08PXJZGDC%2CB09L4X487S" target="_blank">"Knit Mitts: Your Hand-y Guide to Knitting Mittens & Gloves"</a> </p>
-                    <img src="static/Images/Fingerless-gloves-300x200.jpg">
+                    <div class="mobile-center">
+                        <img src="./Images/Fingerless-gloves-300x200.jpg" alt="Photo of book and hand with fingerless mitten on">
+                    </div>
                 </div>
             </div>
-        </section><br><br>
+        </section>
+
         <section class="section-containers">
-            <div class="titles" id="5">Tutorials</div>
+            <div class="titles tutorials" id="5">Tutorials</div>
             <div class="section-content">
-                <img src="static/Images/Knitting-tutorial-pngaaa.com-501381.png">
+                <img src="./Images/Knitting-tutorial-pngaaa.com-501381.png" alt="Tutorial graphic">
                 <div class="text">
                     <p><strong>Kitchener stitch</strong> is a tricky stitch for binding off socks. Here is a video tutorial: </p>
-                    <iframe id="video4" width="300" height="200"
-                    src="https://www.youtube.com/embed/eFHXnvfmoBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
+                    <div class="mobile-center">
+                        <iframe id="video4" width="300" height="200"
+                        src="https://www.youtube.com/embed/eFHXnvfmoBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
                     <p>And a diagram from <a href="https://beccajnorman.com/home" target="_blank">Becca J. Norman's blog</a> for quick reference.</p>
-                    <img src="static/Images/Kitchener-diagram.jpg">
-                    
+                    <div class="mobile-center">
+                        <img src="./Images/Kitchener-diagram.jpg" alt="kitchener stitch diagram">
+                    </div> 
                 </div>
             </div>
-        </section><br><br>
-    </main>
+        </section>
 
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </main>
+    
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>
 </html>

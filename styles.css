@@ -1,0 +1,352 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0px auto;
+    font-family: 'Sue Ellen Francisco', cursive;
+    background-color: #faf5d7;
+}
+
+#nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 65px; 
+    padding-left: 0 10px;
+    font-size: 17pt;
+    background-color: #FFC2E2;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+#img-brand-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFC2E2;
+}
+
+#header-img {
+    width: 40px;
+    height: auto;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    vertical-align: middle;
+    background-color: #FFC2E2;
+}
+
+#brand-name {
+    padding-left: 10px; 
+    padding-top: 4px;
+    font-size: 23pt;
+    background-color: #FFC2E2;
+}
+
+.nav-links-container ul {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 350px;
+    padding-left: 20px;
+}
+
+.nav-links-container li {
+    border-radius: 13px;
+}
+
+.nav-link, li {
+    display: block;
+    padding: 8px;
+    padding-top: 12px;
+    text-decoration: none;
+    color: black
+}
+
+.nav-item:hover,
+.nav-item[active] {
+    background-color: #ff90b3;
+}
+
+.hamburger-button {
+    position: absolute;
+    top: 1.4rem;
+    right: 1rem;
+    width: 25px;
+    height: 22px;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    display: none;
+}
+
+.bar {
+    height: 4px;
+    width: 100%;
+    background-color: #ff90b3;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 640px) {
+    .hamburger-button {
+        display: flex;
+    }
+
+    .hamburger-button.active .bar:first-child { 
+       transform: translateY(8.5px) rotate(45deg);
+    }
+
+    .hamburger-button.active .bar:nth-child(2) {  
+       opacity: 0;  
+    } 
+
+    .hamburger-button.active .bar:last-child {  
+       transform: translateY(-8.5px) rotate(-45deg);
+    }  
+
+    .nav-links-container {
+        position: fixed;
+        top: -100%;
+        z-index: -100;
+        width: 100%;
+        transition: 0.5s ease-in;
+    }
+
+    .nav-links-container.active {
+        top: 65px;
+        transition: 0.5s ease-out; 
+    }
+
+    .nav-links-container ul {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color:#FFC2E2;
+    }
+
+    .nav-links-container li {
+        text-align: center;
+    }
+
+    .nav-link, li {
+        padding: 3px;
+    }
+
+    #img-brand-container {
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        padding-left: 13px;
+    }
+
+    #brand-name {
+        padding-top: 6px;
+        font-size: 26px;
+    }
+
+    #header-img {
+        padding-left: 0;
+        padding-bottom: 7px;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+    margin-top: 65px;
+    overflow: auto;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 170%;
+    font-family: 'Sue Ellen Francisco', cursive;
+}
+
+.section-containers {
+    padding: 0 15px;
+}
+
+.titles {
+    margin-bottom: 10px;
+    padding-top: 15px;
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 20pt;
+    font-weight: 800;
+    text-align: center;
+}
+
+.section-content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+.text {
+    font-family: Calibri, sans-serif;
+    font-size: 12pt;
+    line-height: 1.4;
+}
+
+.text > p:first-child {
+    margin-top: 0;
+}
+
+.knitting-benefits {
+    padding-left: 0px;
+}
+
+.section-content > img {
+    width: 150px;
+    aspect-ratio: 1;
+    padding-left: 20px;
+}
+
+.text > ul > li {
+    margin: 0;
+	padding: 15px 0px 15px 60px;
+	list-style: none;
+    
+	background-image: url("./Images/Red-yarn-PngItem_37893.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 32px;
+}
+
+/* Sign up form */
+#signup {
+    margin-top: 15px;
+    margin-left: 200px;
+    width: max-content;
+}
+
+.form-group {
+    height: 120px;
+    margin-left: 200px;
+}
+
+#email-label {
+    font-size: 16pt;
+    font-weight: 800;
+}
+
+input {
+    position: relative;
+    width: 220px;
+    height: 35px;
+    margin: 8px 0;
+    padding-left: 5pt;
+    z-index: -1;
+
+    display: block;
+    
+    font-family: Calibri, sans-serif;
+    font-size: 12pt;
+    border: solid 2px #FF90b3;
+    border-radius: 5px;
+}
+
+input:focus { 
+    width: 220px;
+    height: 35px;
+    margin: 8px 0;
+    padding-left: 5pt;
+    font-size: 12pt;
+    font-family: Calibri, sans-serif;
+    outline: none !important;
+    border: solid 2px rgb(191, 50, 106);
+    background-color: white;
+}
+
+#submit {
+    cursor: pointer;
+    width: 140px;
+    height: 40px;
+    margin-left: 200px;
+    padding: 0;
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 16pt;
+    font-weight: 500;
+    background-color: #FF90b3;
+    border: solid 2px #FF90b3;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+#submit:hover {
+    font-weight: 500;
+    color: white;
+    background-color: rgb(191, 50, 106);
+    border: solid 2px rgb(191, 50, 106);
+}
+
+#signup {
+    margin-left: 0px;      
+}
+
+strong {
+font-family: 'Sue Ellen Francisco', cursive;
+font-size: 14pt;
+font-weight: 600;
+letter-spacing: 0.5px;
+}
+
+a {
+color: black;
+}
+
+.text a:hover,
+.text a:visited {
+color: rgb(191, 50, 106);
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    .section-content {
+        display: inline-block;
+    }
+
+    .section-content > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0px;
+        width: 150px;
+    }
+
+    .section-content > img {
+        width: 120px;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-left: 0;
+    }
+
+    #submit {
+        margin-left: 0;
+    }
+
+    .mobile-center {
+        text-align: center;
+    }
+}
